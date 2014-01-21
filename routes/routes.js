@@ -31,7 +31,7 @@ var getLawyerProfile = function(req, res, next) {
         model.lawyerProfile.aggregate(aggregate, function(err, data){       
           if (err)
              return next(err);     
-          res.send(data);   
+          res.send(data[0]);   
         }); 
     }
 }
